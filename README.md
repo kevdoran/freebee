@@ -1,7 +1,7 @@
 # Free-form Boolean Expression Evaluator
 
 FreeBEE is an easy-to-use boolean expression evaluator optimized for performance. 
-Specifically, it is fast enough to evaluate thousands of expressions at once against a given input to find all matches milliseconds.
+Specifically, it is fast enough to evaluate thousands of expressions at once against a given input to find all matches in milliseconds.
 
 ## Usage Guide
 
@@ -75,7 +75,7 @@ The `BEDataTypeConstructor` takes the following arguments:
   - `type`: The name of the type. Can be anything, but must be unique to the evaluator being built.
   - `dataType`: One of [`BYTE`, `DOUBLE`, `INT`, `LONG`, `STRING`].
   - `ignoreCase`: For `STRING` types, is matching case-sensitive.
-  - `partial`: For `STRING` types, does the evaluator match partial inputs (uses `startsWith` logic)
+  - `partial`: For `STRING` types, does the evaluator match partial inputs (uses `startsWith` logic).
   - `range`: For numeric types, are the expressions specified using ranges of values rather than exact values.
   - `reverse`: For `STRING` types, should the values be reversed. 
      This, combined with `partial=true`, is useful for matching hierarchal values such as domains, e.g, 
@@ -94,7 +94,7 @@ The `BEDataTypeConstructor` takes the following arguments:
 
 #### Java Example
 
-Note: Future versions of FreeBEE will improve the syntax for crafting expressions. For now, you may find it helpful top write utility classes to simplify this. For an example utility class, see [ExpressionUtil.java](freebee-core/src/test/java/com/amobee/freebee/ExpressionUtil.java)
+Note: Future versions of FreeBEE will improve the syntax for crafting expressions. For now, you may find it helpful to write utility classes to simplify this. For an example utility class, see [ExpressionUtil.java](freebee-core/src/test/java/com/amobee/freebee/ExpressionUtil.java).
 
     final BEConjunctionNode nameOrSides = new BEConjunctionNode(BEConjunctionType.OR);
     nameOrSides.addValue(new BEPredicateNode("shapeName", 
@@ -178,11 +178,11 @@ For more information, see the [Benchmarking Guide](docs/benchmark.md).
 
 ## Acknowledgments
 
-Michael Bond wrote the initial code for the Boolean Expression Evaluator as part of a larger software library at LucidMedia and then Videology.
+Michael Bond wrote the initial code for the Boolean Expression Evaluator as part of a larger software library at LucidMedia and then at Videology.
 
 Bond was inspired by a white paper, [Efficiently Evaluating Complex Boolean Expressions](http://theory.stanford.edu/~sergei/papers/sigmod10-index.pdf) by Fontoura, Sadanandan, et al.
 
-Many people contributed to the project building upon Bond's work. Their names are found in the initial commit of this repository as co-authors.
+Many people contributed to the project, building upon Bond's work. Their names are found in the initial commit of this repository as co-authors.
 
 ## Copyright & License
 
